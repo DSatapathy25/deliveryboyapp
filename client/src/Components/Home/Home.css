@@ -1,0 +1,8 @@
+.home-container {
+ 
+  background: #908f8f;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

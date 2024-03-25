@@ -1,0 +1,94 @@
+.task-card {
+  background-color: #e4c9af;
+  border: 1px solid #9f9e9f;
+ gap:20px;
+  /* padding: 20px; */
+  border-radius: 5px;
+  margin-top: 20px;
+  /* height: 250px;
+  width: 450px; */
+}
+
+.task-card-container {
+  
+ 
+  display: flex;
+ flex-direction: column; 
+  background-color: #c1d7ab;
+  height: 200px;
+  
+}
+
+
+/* Styles for buttons */
+.complete-btn,
+
+.rate-btn,
+.rate-confirm-btn {
+  background-color: #e27012;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cancel-btn{
+  background-color: #c2311b;
+  color: #d8cfcf;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+.complete-btn:hover,
+.rate-btn:hover,
+.rate-confirm-btn:hover {
+  background-color: #0056b3;
+}
+
+.cancel-btn:hover{
+  background-color: #120707;
+}
+
+
+/* Styles for the rating popup */
+.rating-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.rating-popup-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+ .main-container{
+
+  margin-top: 80px;
+ }
+ .main-container ul{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+
+  width: 600px;
+ }

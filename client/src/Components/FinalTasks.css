@@ -1,0 +1,36 @@
+.task-container {
+    margin: 20px;
+  }
+  
+  .task-list {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-list h2 {
+    margin-top: 0;
+  }
+  
+  .task-status {
+    font-weight: bold;
+  }
+  
+  .task-item {
+    list-style-type: none;
+    margin: 5px 0;
+  }
+  
+  .accepted {
+    color: green;
+  }
+  
+  .completed {
+    color: blue;
+  }
+  
+  .canceled {
+    color: red;
+  }
+  

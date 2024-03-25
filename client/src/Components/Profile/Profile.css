@@ -1,0 +1,58 @@
+.profile-container {
+  margin-top: 200px;
+  padding: 20px; 
+  border-radius: 8px;
+  background-color: #eaebd7c2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  display:flex ;
+  flex-direction: column;
+  height: 255px;
+  
+ 
+}
+
+.profile-info {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+ 
+}
+
+
+
+.user-details {
+justify-content: center;
+align-items: center;
+display:flex ;
+flex-direction: column;
+}
+
+.user-details h2 {
+  
+  font-size: 24px;
+  color: #333;
+}
+
+.user-details p {
+
+  color: #666;
+}
+
+.logout-btn {
+  margin-top: 30px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f; /* Darker shade of red on hover */
+}
