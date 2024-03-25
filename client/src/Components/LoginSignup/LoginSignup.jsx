@@ -27,28 +27,28 @@ const LoginSignup = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, password }), // Use name, email, and password directly
+        body: JSON.stringify({ name, email, password }), 
       });
-      const responseData = await response.json(); // Rename data to responseData
+      const responseData = await response.json(); 
 
       console.log(responseData, "sign-up responseData");
-      // If signup was successful, redirect the user to the login page
+     
       if (!response.ok) {
-        // If response status is 400 (Bad Request), display the error message from the server
+       
         if (response.status === 400) {
           const errorData = await response.json();
           alert(errorData.message);
         }
-        // If response status is 500 (Internal Server Error), inform the user about the server error
+        
         else if (response.status === 500) {
           alert('Internal server error. Please try again later.');
         }
-        // For other status codes, display a generic error message
+      
         else {
           alert('An error occurred. Please try again later.');
         }
       }
-      // If response is okay, proceed with the success scenario
+    
       else {
         alert('Signup successful! Please login.');
         navigate('/');
@@ -73,7 +73,7 @@ const LoginSignup = () => {
     <div className='container'>
       <div className='header'>
         <div className='text'>Sign Up</div>
-        {/* <div className='underline'></div> */}
+       
       </div>
       <form className='inputs' onSubmit={handleSubmit}>
        

@@ -11,7 +11,7 @@ require("dotenv").config();
 // Connect to the database
 connectDB()
   .then(() => {
-    // Once the database is connected, start the server
+  
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });

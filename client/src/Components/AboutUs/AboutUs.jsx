@@ -1,7 +1,7 @@
 // aboutus.jsx
 
 import React from 'react';
-import './AboutUs.css'; // Import the CSS file
+import './AboutUs.css';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const AboutUs = () => {

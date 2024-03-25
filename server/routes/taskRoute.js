@@ -3,7 +3,7 @@ const router = express.Router();
 const taskController = require('../controllers/taskController');
 const authenticateUser = require('../middleware/authMiddleware');
 
-// Route to rate a completed task
+
 router.post('/tasks/:taskId/complete/rate', authenticateUser,taskController.rateCompletedTask)
 
 module.exports = router;

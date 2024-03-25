@@ -22,7 +22,7 @@ const LoginSignin = () => {
   try {
      
 
-        const response = await fetch('/auth/login', { // Corrected endpoint
+        const response = await fetch('/auth/login', { 
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -30,26 +30,26 @@ const LoginSignin = () => {
           body: JSON.stringify({ email, password }),
         });
        
-        // If login was successful, redirect the user to the dashboard or home page
+       
         if (response.ok) {
           const data = await response.json();
           const {token} = data;
-           // Store the token in localStorage
+          
     localStorage.setItem('token', token);
           console.log(data, "login-data");
-          alert('Login successful!');
+         
           navigate('/');
-          // Redirect or perform other actions after login
+          
         } else {
           const data = await response.json();
-          alert(data.message); // Display error message
+        
           console.log("error");
         }
       
       
     } catch (error) {
       console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
+     
     }
 
  }

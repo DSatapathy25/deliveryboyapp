@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
-  // Define other fields of the task schema
+  
   task_id: String,
   pickup_address: String,
   delivery_address: String,

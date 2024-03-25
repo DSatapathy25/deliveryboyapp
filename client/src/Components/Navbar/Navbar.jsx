@@ -1,4 +1,3 @@
-// Navbar.jsx
 
 import React from 'react';
 import user_icon from '../Assets/user.jpeg';

@@ -9,11 +9,11 @@ function Dashboard() {
     fetchTasks();
   }, []);
 
-// console.log(tasks);
+
 
   async function fetchTasks() {
     try {
-      const token = localStorage.getItem('token'); // Retrieve token from localStorage
+      const token = localStorage.getItem('token'); 
 
       if (!token) {
         throw new Error('No token found');
@@ -21,7 +21,7 @@ function Dashboard() {
 
       const response = await fetch('/api/tasks', {
         headers: {
-          Authorization: `Bearer ${token}`, // Include the authorization token in headers
+          Authorization: `Bearer ${token}`,
         },
       });
       if (!response.ok) {
@@ -37,15 +37,15 @@ function Dashboard() {
 
   const acceptTask = async (taskId) => {
     try {
-      const token = localStorage.getItem('token'); // Retrieve token from localStorage
+      const token = localStorage.getItem('token'); 
       const response = await fetch(`/api/tasks/${taskId}/accept`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`, // Include the authorization token in headers
+          Authorization: `Bearer ${token}`, 
         },
       });
       if (response.ok) {
-        // If task accepted successfully, update the tasks list
+        
         setTasks(prevTasks => prevTasks.filter(task => task.task_id !== taskId));
       } else {
         console.error('Error accepting task:', response.statusText);

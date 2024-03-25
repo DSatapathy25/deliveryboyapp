@@ -78,11 +78,7 @@ const completeTask = async (req, res) => {
     await completedTask.save()
     completedTasks.push(completedTask);
    
-    //console.log(JSON.stringify(completedTask));
     
-    // Here you can handle the rating logic before saving the task to the database
-    // await Task.findByIdAndUpdate(taskId, { status: "completed", rating });
-
     res.json(completedTask);
   } catch (error) {
     console.error("Error completing task:", error);
@@ -119,16 +115,13 @@ const fetchAcceptedTasks = (req, res) => {
   res.json(acceptedTasks);
 };
 
-// const fetchCanceledTasks = (req, res) => {
-//   res.json(cancelTaskss);
-// };
-// controllers/userController.js
+
 
 
 
 const fetchAllTasks = async (req, res) => {
   try {
-    // Fetch all tasks from the database
+   
     const tasks = await Task.find({});
     res.json(tasks);
   } catch (error) {

@@ -17,13 +17,13 @@ const  navigate=useNavigate();
   useEffect(() => {
     const getUserData = async () => {
       try {
-        const token = localStorage.getItem('token'); // Retrieve token from localStorage
+        const token = localStorage.getItem('token');
   console.log(token, "UI token");
         const response = await fetch('/api/profile', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`, // Include the authorization token
+            Authorization: `Bearer ${token}`,
           },
         });
   
